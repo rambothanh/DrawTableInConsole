@@ -52,35 +52,25 @@ namespace DrawTableInConsole
                     {
                         //Hiện dòng đầu tiên
                         CreateTable(id, date, title.Substring(0, Math.Min(lenTitle, 20)), content.Substring(0, Math.Min(lenContent, 30)), viTri);
-                        //Console.Write($"{titleString.Substring(0, Math.Min(titleLen, 20)),-20} ");
-                        //Console.WriteLine($"{contentString.Substring(0, Math.Min(contentLen, 30)),-30}");
+                        
                     }
                     else
                     {
                         if (i <= Math.Min(lineTitle, lineContent))
                         {
                             CreateTable("", "", title.Substring(20 * i, Math.Min(lenTitle - 20 * i, 20)), content.Substring(30 * i, Math.Min(lenContent - 30 * i, 30)), viTri);
-                            ////Từ dòng thứ 2 trở đi cách đầu dòng 24 ký tự
-                            //Console.Write("                        ");
-                            ////Hiển thị title 
-                            ////Substring(vịtrí, độ dài)
-                            //Console.Write($"{titleString.Substring(20 * i, Math.Min(titleLen - 20 * i, 20)),-20} ");
-                            //Console.WriteLine($"{contentString.Substring(30 * i, Math.Min(contentLen - 30 * i, 30)),-30}");
+                           
 
                         }
                         else if (lineTitle >= lineContent)
                         {
                             CreateTable("", "", title.Substring(20 * i, Math.Min(lenTitle - 20 * i, 20)),"", viTri);
-                            ////Từ dòng thứ 2 trở đi cách đầu dòng 24 ký tự
-                            //Console.Write("                        ");
-                            //Console.WriteLine($"{titleString.Substring(20 * i, Math.Min(titleLen - 20 * i, 20)),-20} ");
+                            
                         }
                         else if (lineTitle < lineContent)
                         {
                             CreateTable("", "", "", content.Substring(30 * i, Math.Min(lenContent - 30 * i, 30)), viTri);
-                            ////thêm 24 + 21 =45ký tự
-                            //Console.Write("                                             ");
-                            //Console.WriteLine($"{contentString.Substring(30 * i, Math.Min(contentLen - 30 * i, 30)),-30}");
+                            
                         }
 
                     }
